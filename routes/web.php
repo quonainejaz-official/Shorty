@@ -23,7 +23,7 @@ Route::post('/reset-password/submit', [AuthController::class, 'resetPasswordSubm
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', [HomeController::class, 'Dashboard'])->name('dashboard');
-Route::get('/dashboard', [HomeController::class, 'Dashboard'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'Dashboard']);
 
 Route::post('/shorten', [ShortLinkController::class, 'store'])->name('shorten.store')->middleware('auth');
 
